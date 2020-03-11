@@ -14,7 +14,7 @@ function createUser($username, $password){
 
     $pseudo = substr($username, 0, strpos($username, "@"));
     $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
-    $query = "INSERT INTO users (userEmailAddress, userPsw, pseudo) VALUES ( '{$username}' , '{$encrypted_password}', '{$pseudo}')";
+    $query = "INSERT INTO users (userEmailAddress, userPsw, pseudo, vendeur) VALUES ( '{$username}' , '{$encrypted_password}', '{$pseudo}', '0')";
     require_once "dbConnector.php";
     executeQuery($query);
 

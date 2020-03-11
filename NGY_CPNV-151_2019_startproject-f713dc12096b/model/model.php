@@ -18,7 +18,7 @@ function checkPassword($username, $password)
     $username2 = "";
     $password2 = "";
     $pseudo ="";
-
+    $vendor = "";
     $bool = FALSE;
 
     if(!$data == null) {
@@ -28,7 +28,7 @@ function checkPassword($username, $password)
 
                 $username2 = $elements["userEmailAddress"];
                 $password2 = $elements["userPsw"];
-
+$vendor = $elements["vendeur"];
 
 
 
@@ -38,16 +38,18 @@ function checkPassword($username, $password)
         }
     }else{
 
-        $bool = FALSE;
+        $bool = 1;
     }
 
     if (password_verify($password, $password2) && ($username == $username2 || $username == $pseudo)){
-        $bool = FALSE;
+    if($vendor == 1){
+        $bool = 2;
+    }else {
+        $bool = 1;
+    }
     }else{
-        if($username == "jessy.borcard@cpnv.ch"){
-            $_POST['vendor']
-        }
-        $bool = TRUE;
+
+        $bool = 0;
     }
 
 
@@ -56,5 +58,16 @@ function checkPassword($username, $password)
     return $bool;
 }
 
+function checkEmail($username){
+
+   $data =  getUser($username);
+
+   if(isset($data[0]["userEmailAddress"])) {
+       return TRUE;
+   }else{
+       return FALSE;
+   }
+
+}
 
 ?>

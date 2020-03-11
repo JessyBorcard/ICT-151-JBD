@@ -21,5 +21,21 @@ function getSnows(){
     return $queryResult;
 }
 
+function deleteSnow($code){
 
+    $query = "DELETE FROM snows WHERE code = '{$code}'";
+    require_once "dbConnector.php";
+     executeQuery($query);
+
+
+}
+
+function addSnowModel(){
+
+
+}
+
+function editSnow(){
+
+}
 ?>

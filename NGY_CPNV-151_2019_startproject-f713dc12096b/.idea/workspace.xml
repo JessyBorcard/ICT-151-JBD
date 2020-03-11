@@ -49,12 +49,17 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jessy.BORCARD\Documents\ICT120\ICT-151-JBD\NGY_CPNV-151_2019_startproject-f713dc12096b\view" />
       <recent name="C:\Users\Jessy.BORCARD\Documents\ICT120\ICT-151-JBD\NGY_CPNV-151_2019_startproject-f713dc12096b\model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jessy.BORCARD\Documents\ICT120\ICT-151-JBD\NGY_CPNV-151_2019_startproject-f713dc12096b\view" />
+      <recent name="C:\Users\Jessy.BORCARD\Documents\ICT120\ICT-151-JBD\NGY_CPNV-151_2019_startproject-f713dc12096b\view\content\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -119,6 +124,14 @@
       <workItem from="1582534504898" duration="36000" />
       <workItem from="1582535154968" duration="1209000" />
       <workItem from="1582721474286" duration="7115000" />
+      <workItem from="1582807335539" duration="199000" />
+      <workItem from="1582882827550" duration="6245000" />
+      <workItem from="1583139699798" duration="8000" />
+      <workItem from="1583325881637" duration="6857000" />
+      <workItem from="1583411688100" duration="30000" />
+      <workItem from="1583489814749" duration="3207000" />
+      <workItem from="1583744523174" duration="50000" />
+      <workItem from="1583931174334" duration="7069000" />
     </task>
     <servers />
   </component>

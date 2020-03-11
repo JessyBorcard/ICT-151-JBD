@@ -24,8 +24,17 @@ $titre = "Rent A Snow - register";
     </form>
 
 
+
 <?php
+require_once "controler/controler.php";
+
+?>
+
+<?php
+
 $contenu = ob_get_clean();
+
+
 
 require  "gabarit.php";
 

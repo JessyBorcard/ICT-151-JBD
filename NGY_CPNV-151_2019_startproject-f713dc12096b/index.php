@@ -20,11 +20,17 @@ case 'register':
 register($_POST);
 break;
 case 'products':
-products();
+products(@$_GET["type"],@$_GET["code"] );
 break;
 case 'error':
 error();
 break;
+    case 'aSnow':
+        aSnow();
+        break;
+    case 'addSnow':
+        addSnow($_POST);
+        break;
 default:
 home();
 

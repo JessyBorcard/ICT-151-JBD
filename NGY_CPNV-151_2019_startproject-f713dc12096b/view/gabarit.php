@@ -78,7 +78,7 @@
                   <?php endif; ?>
 
 <li><a href="index.php?action=products">Products</a></li>
-                  <?php $username = @$_POST['login']; $password = @$_POST['password']; if(checkPassword($username,$password) == FALSE) :  ?>
+                  <?php $username = @$_SESSION["username"]; $password = @$_SESSION['password']; if(checkPassword($username,$password) >= 1) :  ?>
                       <?php  if ($_GET['action'] == "logout") :?>
                           <li class="active"><a href="index.php?action=logout">Logout</a></li>
                       <?php else:?>
@@ -128,6 +128,7 @@
         <!--__________CONTENU__________-->
 
           <div class="span12" id="divMain">
+
             <?=$contenu; ?>
           </div>
 
