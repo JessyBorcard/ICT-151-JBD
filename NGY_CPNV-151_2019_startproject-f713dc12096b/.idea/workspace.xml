@@ -53,13 +53,13 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jessy.BORCARD\Documents\ICT120\ICT-151-JBD\NGY_CPNV-151_2019_startproject-f713dc12096b\view\content\images" />
+      <recent name="C:\Users\Jessy.BORCARD\Documents\ICT120\ICT-151-JBD\NGY_CPNV-151_2019_startproject-f713dc12096b\view" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jessy.BORCARD\Documents\ICT120\ICT-151-JBD\NGY_CPNV-151_2019_startproject-f713dc12096b\view" />
       <recent name="C:\Users\Jessy.BORCARD\Documents\ICT120\ICT-151-JBD\NGY_CPNV-151_2019_startproject-f713dc12096b\model" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jessy.BORCARD\Documents\ICT120\ICT-151-JBD\NGY_CPNV-151_2019_startproject-f713dc12096b\view" />
-      <recent name="C:\Users\Jessy.BORCARD\Documents\ICT120\ICT-151-JBD\NGY_CPNV-151_2019_startproject-f713dc12096b\view\content\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -133,7 +133,7 @@
       <workItem from="1583744523174" duration="50000" />
       <workItem from="1583931174334" duration="7069000" />
       <workItem from="1584017367115" duration="334000" />
-      <workItem from="1584093346383" duration="992000" />
+      <workItem from="1584093346383" duration="3953000" />
     </task>
     <servers />
   </component>

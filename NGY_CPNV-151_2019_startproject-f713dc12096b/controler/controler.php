@@ -133,7 +133,7 @@ function panier(){
 }
 
 
-function edit($code, $codeedit){
+function edit($code){
 
     require_once "model/SnowsManagement.php";
     $snows = getSnows();
@@ -147,7 +147,8 @@ function edit($code, $codeedit){
 function addSnow($in){
     if(isset($in["codeAdd"])){
         require_once "model/SnowsManagement.php";
-        addSnowModel();
+        addSnowModel($in);
+        require "view/home.php";
 
     }else {
         $_GET["action"] = "addSnow";

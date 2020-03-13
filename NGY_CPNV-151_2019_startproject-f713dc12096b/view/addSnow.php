@@ -17,24 +17,24 @@ require_once "model/SnowsManagement.php";
 
 ?>
 
-<form method="post" action="index.php?action=addSnow.php">
-    <label>Code :<input type="text" class="w-100" name="codeAdd"  required></label>
+<form method="post" action="index.php?action=addSnow">
+    <label>Code :<input type="text" class="w-100" name="codeAdd"  required maxlength="4" ></label>
     <label>Marque :
-    <input type="text" class="w-100" name="marque" required></label>
+    <input type="text" class="w-100" name="marque" required maxlength="20"></label>
     <label>Model :
-    <input type="text" class="w-100" name="model" required></label>
+    <input type="text" class="w-100" name="model" required maxlength="30"></label>
     <label>Longueur :
-    <input type="number" class="w-100" name="longueur" required></label>
+    <input type="number" class="w-100" name="longueur" required max="9999"></label>
     <label>Quantité :
-        <input type="number" class="w-100" name="quantite" required></label>
+        <input type="number" class="w-100" name="quantite" required max="9999"></label>
     <label>Descripton :
-        <input type="text" class="w-100" name="descripton" required></label>
+        <input type="text" class="w-100" name="descripton" required maxlength ="200"></label>
     <label>Prix :
-        <input type="number" class="w-100" name="prix" required></label>
+        <input type="number" class="w-100" name="prix" required max="999999"></label>
     <label>Photo :
-        <input type="file" class="w-100" name="photo" required></label>
+        <input type="file" class="w-100" name="photo" required maxlength ="20"></label>
     <label>Active :
-        <input type="number" class="w-100" name="active" required></label>
+        <input type="number" class="w-100" name="active" required maxlength ="1" min="0" max="1"></label>
 
     <button type="submit" class="w-100">Valider</button>
 

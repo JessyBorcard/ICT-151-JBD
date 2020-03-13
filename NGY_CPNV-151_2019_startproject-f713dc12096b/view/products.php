@@ -43,7 +43,7 @@ $titre = "RentASnow - Produits";
         ?>
     <?php if (isset($vendor) && $vendor == 1): ?>
 
-        <tr><td><?php echo "$elements[1]"; ?></td><td><?php echo "$elements[2]";  ?></td><td><?php echo "$elements[3]";  ?></td><td><?php echo "$elements[4]";  ?></td><td><?php echo "$elements[5]";  ?></td><td><?php echo "$elements[7]";  ?></td><td><img src=<?php echo $elements[8] ?> alt="Snow" title="Snow"/></td><td><a href="index.php?action=products&type=delete&code=<?php echo $elements[1] ?>"><img src="view/content/images/delete2.png" alt="Snow" title="Snow"/></a></td><td><a href="index.php?action=products&type=edit&code=<?php echo $elements[1] ?>"><img src="view/content/images/edit2.png" alt="Snow" title="Snow"/></a></td></tr>
+        <tr><td><?php echo "$elements[1]"; ?></td><td><?php echo "$elements[2]";  ?></td><td><?php echo "$elements[3]";  ?></td><td><?php echo "$elements[4]";  ?></td><td><?php echo "$elements[5]";  ?></td><td><?php echo "$elements[7]";  ?></td><td><img src=<?php echo $elements[8] ?> alt="Snow" title="Snow"/></td><td><a href="index.php?action=products&type=delete&code=<?php echo $elements[1] ?>"><img src="view/content/images/delete2.png" alt="Snow" title="Snow"/></a></td><td><a href="index.php?action=edit&code=<?php echo $elements[0] ?>"><img src="view/content/images/edit2.png" alt="Snow" title="Snow"/></a></td></tr>
 
 
     <?php else: ?>

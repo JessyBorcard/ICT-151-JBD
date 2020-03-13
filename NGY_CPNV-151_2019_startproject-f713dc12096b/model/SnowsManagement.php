@@ -30,8 +30,15 @@ function deleteSnow($code){
 
 }
 
-function addSnowModel(){
+function addSnowModel($in){
 
+    $photo = "view/content/images/" . substr($in["photo"], 0, 4) . ".jpg";
+
+    $query = "INSERT INTO `snows` ( `code`, `brand`, `model`, `snowLength`, `qtyAvailable`, `description`, `dailyPrice`, `photo`, `active`) VALUES
+	( '{$in["codeAdd"]}', '{$in["marque"]}', '{$in["model"]}', {$in["longueur"]}, {$in["quantite"]}, '{$in["descripton"]}', {$in["prix"]}, '{$photo}', {$in["active"]})";
+
+    require_once "dbConnector.php";
+    executeQuery($query);
 }
 
 function editSnow(){

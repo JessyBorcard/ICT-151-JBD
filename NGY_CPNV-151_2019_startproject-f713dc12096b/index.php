@@ -28,6 +28,9 @@ break;
     case 'aSnow':
         aSnow();
         break;
+    case 'edit':
+        edit($_GET["code"]);
+        break;
     case 'addSnow':
         addSnow($_POST);
         break;
