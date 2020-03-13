@@ -18,7 +18,7 @@ require_once "model/SnowsManagement.php";
 ?>
 
 <form method="post" action="index.php?action=addSnow.php">
-    <label>Code :<input type="text" class="w-100" name="code"  required></label>
+    <label>Code :<input type="text" class="w-100" name="codeAdd"  required></label>
     <label>Marque :
     <input type="text" class="w-100" name="marque" required></label>
     <label>Model :

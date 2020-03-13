@@ -145,7 +145,7 @@ function edit($code, $codeedit){
 }
 
 function addSnow($in){
-    if(isset($in)){
+    if(isset($in["codeAdd"])){
         require_once "model/SnowsManagement.php";
         addSnowModel();
 

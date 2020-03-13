@@ -32,7 +32,6 @@ function deleteSnow($code){
 
 function addSnowModel(){
 
-
 }
 
 function editSnow(){
