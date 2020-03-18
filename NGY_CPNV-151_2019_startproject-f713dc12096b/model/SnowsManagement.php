@@ -41,7 +41,14 @@ function addSnowModel($in){
     executeQuery($query);
 }
 
-function editSnow(){
+function editASnow($in){
+
+    $query = "UPDATE snows SET code =  '{$in["code"]}', brand =  '{$in["marque"]}', model = '{$in["model"]}', snowLength = {$in["longueur"]}, qtyAvailable = {$in["quantite"]}, description = '{$in["description"]}', dailyPrice =  {$in["prix"]} WHERE id = {$in["id"]} ";
+
+    var_dump($query);
+    require_once "dbConnector.php";
+    executeQuery($query);
+
 
 }
 ?>

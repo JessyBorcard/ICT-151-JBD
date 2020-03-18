@@ -144,6 +144,18 @@ function edit($code){
 
 }
 
+function editSnow($in){
+
+
+var_dump($in);
+    $_GET["action"] = "editSnow";
+    require_once "model/SnowsManagement.php";
+    editASnow($in);
+
+    $_GET["action"] = "home";
+    require "view/home.php";
+}
+
 function addSnow($in){
     if(isset($in["codeAdd"])){
         require_once "model/SnowsManagement.php";

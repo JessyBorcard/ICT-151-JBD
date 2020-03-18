@@ -34,6 +34,9 @@ break;
     case 'addSnow':
         addSnow($_POST);
         break;
+    case 'editSnow':
+        editSnow($_POST);
+        break;
 default:
 home();
 

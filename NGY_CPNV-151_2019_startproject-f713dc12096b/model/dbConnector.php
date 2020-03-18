@@ -26,13 +26,13 @@ function openDbConnection($query)
 
     $sqlDriver = 'mysql';
     $hostname = 'localhost';
-    $userName = 'BorcardEval';
+    $userName = 'root';
     $userPwd = '1234';
 
 
     $dbName = 'snows';
     $dbEncoding = 'utf8';
-    $dbPort = '50000';
+    $dbPort = '5001';
 
 
     $dsn = $sqlDriver . ":host=" . $hostname . ";dbname=" . $dbName. ";port=" . $dbPort . ";charset". $dbEncoding;
