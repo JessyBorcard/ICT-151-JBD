@@ -20,7 +20,7 @@ case 'register':
 register($_POST);
 break;
 case 'products':
-products(@$_GET["type"],@$_GET["code"] );
+products($_GET["type"],$_GET["code"] );
 break;
 case 'error':
 error();

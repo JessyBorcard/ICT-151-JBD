@@ -32,9 +32,11 @@ function login($in)
 {
 
     $bool = 0;
-    $password = @$in['password'];
-    $username = @$in['login'];
-    $checkedpassword = checkPassword($username, $password);
+    $password = $in['password'];
+    $username = $in['login'];
+    if(isset($password) && isset($username)) {
+        $checkedpassword = checkPassword($username, $password);
+    }
     if (!$password) {
 
         $_GET['action'] = "login";
@@ -78,11 +80,16 @@ function register($in){
     $_GET['action']="register";
     require "view/register.php";
 
-    $password = @$in['passwordregister'];
-    $username = @$in['usernameregister'];
+    $password = $in['passwordregister'];
+    $username = $in['usernameregister'];
 
+    if(isset($password) && isset($username)) {
+        $result = checkEmail($username);
+    }else{
+        $_GET['action'] = "home";
+        require "view/home.php";
+    }
 
- $result = checkEmail($username);
 if($result == TRUE){
 
 
@@ -98,7 +105,7 @@ if($result == TRUE){
 
 function products($type, $code){
 
-    if(isset($code)){
+    if(!isset($code) && !isset($type)){
         if($type == "delete") {
             require_once "model/SnowsManagement.php";
             deleteSnow($code);
@@ -134,29 +141,38 @@ function panier(){
 
 
 function edit($code){
-
+    if(isset($_SESSION['vendor'])) {
     require_once "model/SnowsManagement.php";
     $snows = getSnows();
     $_POST["snows"] = $snows;
 
     $_GET["action"] = "edit";
     require "view/edit.php";
-
+}else{
+        $_GET["action"] = "home";
+        require "view/home.php";
+    }
 }
 
 function editSnow($in){
 
 
-var_dump($in);
-    $_GET["action"] = "editSnow";
-    require_once "model/SnowsManagement.php";
-    editASnow($in);
+    if(isset($_SESSION['vendor'])) {
 
-    $_GET["action"] = "home";
-    require "view/home.php";
+        $_GET["action"] = "editSnow";
+        require_once "model/SnowsManagement.php";
+        editASnow($in);
+
+        $_GET["action"] = "home";
+        require "view/home.php";
+    }else{
+        $_GET["action"] = "home";
+        require "view/home.php";
+    }
 }
 
 function addSnow($in){
+    if(isset($_SESSION['vendor'])) {
     if(isset($in["codeAdd"])){
         require_once "model/SnowsManagement.php";
         addSnowModel($in);
@@ -165,6 +181,10 @@ function addSnow($in){
     }else {
         $_GET["action"] = "addSnow";
         require "view/addSnow.php";
+    }
+    }else{
+        $_GET["action"] = "home";
+        require "view/home.php";
     }
 }
 
