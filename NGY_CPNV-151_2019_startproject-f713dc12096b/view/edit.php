@@ -14,8 +14,21 @@ $titre = "RentASnow - edit";
 require_once "model/SnowsManagement.php";
 $data = $_POST["snows"];
 $key = $_GET["code"];
-$key--;
-$snow = $data[$key];
+
+
+
+foreach($data as  $value) {
+
+
+
+    if($key == $value["id"]){
+
+        $key2 = $value;
+    }
+}
+
+
+$snow = $key2;
 ?>
 
 <div class="thumbnail">

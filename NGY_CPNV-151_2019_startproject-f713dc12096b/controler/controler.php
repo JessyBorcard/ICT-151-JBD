@@ -105,8 +105,11 @@ if($result == TRUE){
 
 function products($type, $code){
 
-    if(!isset($code) && !isset($type)){
+    if(isset($code) && isset($type)){
+
+
         if($type == "delete") {
+
             require_once "model/SnowsManagement.php";
             deleteSnow($code);
         }
@@ -173,10 +176,31 @@ function editSnow($in){
 
 function addSnow($in){
     if(isset($_SESSION['vendor'])) {
-    if(isset($in["codeAdd"])){
         require_once "model/SnowsManagement.php";
-        addSnowModel($in);
-        require "view/home.php";
+        $snows  = getSnows();
+
+    if(isset($in["codeAdd"])){
+        foreach($snows as  $value) {
+
+
+
+            if($in["codeAdd"] == $value["code"]){
+
+                 $something = true;
+            }else{
+                $something = false;
+            }
+        }
+
+
+        if($something){
+
+        }else {
+            require_once "model/SnowsManagement.php";
+            addSnowModel($in);
+            $_GET["action"] = "home";
+            require "view/home.php";
+        }
 
     }else {
         $_GET["action"] = "addSnow";
