@@ -29,6 +29,7 @@ $snow = $data[$key];
         <p> Prix : <?php echo $snow[5] ?></p><br>
         <p> disponibilité : <?php echo $snow[7] ?></p>
         <p> Descriptions : <?php echo $snow[6] ?></p>
+
         <a href="index.php?action=delete&code=<?=$snow[0];?>&codedelete=<?=$snow[1] ?>" onclick="addSnowToCart() " class="w-100"><button class="w-100">Supprimer</button></a>
     </div>
 </div>

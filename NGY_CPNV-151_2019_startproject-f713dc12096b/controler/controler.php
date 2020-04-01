@@ -109,9 +109,25 @@ function products($type, $code){
 
 
         if($type == "delete") {
-
             require_once "model/SnowsManagement.php";
-            deleteSnow($code);
+             $snows = getSnows();
+            foreach($snows as  $value) {
+
+
+
+                if($code["codeAdd"] == $value["code"]){
+                    if($value["active"] == 1){
+                        $_GET['action'] = "products";
+                        require "view/products.php";
+
+                    }else{
+                        require_once "model/SnowsManagement.php";
+                        deleteSnow($code);
+                    }
+                }
+                }
+
+
         }
     }
 
@@ -187,26 +203,29 @@ function addSnow($in){
             if($in["codeAdd"] == $value["code"]){
 
                  $something = true;
+                $_GET["action"] = "home";
+                require "view/home.php";
             }else{
+
                 $something = false;
+
             }
         }
 
 
-        if($something){
+
 
         }else {
-            require_once "model/SnowsManagement.php";
-            addSnowModel($in);
-            $_GET["action"] = "home";
-            require "view/home.php";
-        }
 
-    }else {
+        require_once "model/SnowsManagement.php";
+        addSnowModel($in);
         $_GET["action"] = "addSnow";
         require "view/addSnow.php";
     }
-    }else{
+
+    }
+    else {
+
         $_GET["action"] = "home";
         require "view/home.php";
     }

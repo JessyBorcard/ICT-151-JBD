@@ -17,7 +17,19 @@ $titre = "Rent A Snow - A Snow";
 require_once "model/SnowsManagement.php";
 $data = $_POST["snows"];
 $key = $_GET["snow"];
-$snow = $data[$key];
+
+foreach($data as  $value) {
+
+
+
+    if($key == $value["id"]){
+
+        $key2 = $value;
+    }
+}
+
+
+$snow = $key2;
 ?>
 
 
